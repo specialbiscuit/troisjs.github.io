@@ -48,7 +48,7 @@ Occasionally, models will have their materials' metalness set to 0 and look unaf
 export default {
     methods: {
         onReady(model){
-            model.traverse(o => {
+            model.scene.traverse(o => {
                 if (o.isMesh){
                     // handle both multiple and single materials
                     const asArray = Array.isArray(o.material) ? o.material : [o.material]
